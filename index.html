@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Динамічно сформована сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            margin: 20px;
+            color: #2c3e50;
+        }
+        .content {
+            text-align: center;
+            font-size: 18px;
+            color: #e74c3c;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        "use strict";
+
+        document.write("<div class='header'>");
+        document.write("<h1>Ласкаво просимо на динамічну сторінку</h1>");
+        document.write("<p>Ця сторінка створена за допомогою JavaScript</p>");
+        document.write("</div>");
+
+        document.write("<div class='content'>");
+        document.write("<p style='font-weight: bold;'>Це приклад роботи з динамічним HTML</p>");
+
+        let lang = prompt("Введіть код мови (ua, en, pl, de):");
+        if (lang === "ua") {
+            document.write("<p>Ви обрали: Українська</p>");
+        } else if (lang === "en") {
+            document.write("<p>Ви обрали: Англійська</p>");
+        } else if (lang === "pl") {
+            document.write("<p>Ви обрали: Польська</p>");
+        } else if (lang === "de") {
+            document.write("<p>Ви обрали: Німецька</p>");
+        } else {
+            document.write("<p>Мову невизначено</p>");
+        }
+
+        document.write("</div>");
+
+        document.write("<div class='footer'>");
+        document.write("<p>&copy; 2024 Ваша компанія. Усі права захищені.</p>");
+        document.write("</div>");
+    </script>
+</body>
+</html>
